@@ -6,7 +6,11 @@ O site possui um design moderno e aplativo, contendo gráficos aplativos
 
 ---
 
+## Logotípo
 
+ <img src="images/funtrack_logo.png" alt="Logo do FunTrack" width="120" style="vertical-align: middle; margin-right: 10px;"/>
+
+---
 ## Funcionalidades
 
 - Por enqunto o **FunTrack** não possui funcionalidades, porém estou a pensar adicionar algumas funcionalidades nas próximas atualizações
@@ -26,11 +30,6 @@ O site possui um design moderno e aplativo, contendo gráficos aplativos
 - **CSS3** – Estilização moderna e responsiva
 - **JavaScript** – Interatividade e lógica no front-end
 ---
-
-
-
-
-
 
 
 ## 📄 Direitos Autorais
