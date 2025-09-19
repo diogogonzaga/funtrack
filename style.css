@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  height: 100vh;
+  background-color: #D0C9C0;
+}
+
+header {
+background-color: #1A1A1D;
+
+  padding: 20px;
+  position: relative; 
+  height: 125px;   
+}
+
+
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav.menu-lateral{
+  width: 80px;
+  height: 100%;
+  background-color: #1A1A1D;
+  padding: 40px 0 40px 1%;
+  box-shadow: 6px 0 0 #6E3FA8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+nav.menu-lateral.expandir{
+  width: 300px;
+
+}
+
+.btn-expandir{
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn-expandir > i{
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+ul{
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li.item-menu{
+  transition: 0.5s;
+}
+
+/* Itens normais no hover -> mudam o fundo */
+ul li.item-menu:hover:not(.ativo) {
+  background: linear-gradient(135deg, #C92A00, #6E3FA8);
+  border-radius: 5px;
+}
+
+/* Item ativo -> não muda fundo */
+ul li.ativo {
+  background: none; 
+}
+
+/* Ícone do item ativo -> cor diferente */
+ul li.ativo a .icon > i {
+  color: #C92A00;
+}
+
+
+
+/*
+ul li.item-menu:hover{
+   background: linear-gradient(135deg, #C92A00, #6E3FA8);
+  border-radius: 5px;
+}
+*/
+ul li.item-menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+  margin-left: 70px;
+  transition: 1s;
+  opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+  margin-left: 40px;
+  opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+font-size: 30px;
+margin-left: 5px;
+}
+
+/*Body*/
+
+.dashboard {
+  padding: 20px;
+  margin-left: 80px; /* espaço para menu lateral */
+}
+
+/* Cards de estatísticas */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1;
+  min-width: 120px;  /* menor largura */
+  min-height: 120px; /* menor altura */
+  background: #E0E0E0;
+  padding: 35px;     /* padding reduzido */
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #222;
+}
+
+.card_games {
+  flex: 1;
+  min-width: 120px;  /* menor largura */
+  min-height: 120px; /* menor altura */
+  background: #E0E0E0;
+  padding: 35px;     /* padding reduzido */
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #222;
+    max-width: 500px;  /* menor largura */
+}
+
+.card-img-top{
+  width: 200px;
+}
+
+
+.card i {
+  font-size: 2rem;  /* menor tamanho do ícone */
+  margin-bottom: 8px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+.card h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Seções de destaques */
+/* remove margens forçadas nos títulos */
+.highlights h2,
+.recent h2,
+.recommendations h2 {
+  margin-top: 40px;    /* margem superior suave */
+  margin-bottom: 20px; /* espaço embaixo */
+  color: #6E3FA8;
+  text-align: center;  /* centraliza */
+}
+
+/* ajusta os títulos dentro dos gráficos */
+.chart-card h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #6E3FA8; /* mesma cor para consistência */
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.highlight {
+  background: #D6D6D6; /* cinza um pouco mais escuro */
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #222;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+
+.highlights_games{
+
+    display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+}
+
+/* Atividades recentes */
+.recent ul {
+  list-style: none;
+  padding: 0;
+}
+.recent li {
+  margin: 8px 0;
+  background: #1E1E1E;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Recomendações */
+.recommendations .highlight-grid .highlight {
+  background: #CFCFCF; /* tom levemente diferente para separar visualmente */
+}
+/* Scroll suave para quando o menu lateral expandir */
+.dashboard::-webkit-scrollbar {
+  width: 8px;
+}
+.dashboard::-webkit-scrollbar-thumb {
+  background: #6E3FA8;
+  border-radius: 4px;
+}
+.dashboard::-webkit-scrollbar-track {
+  background: #1A1A1D;
+}
+
+
+.paragrafo{
+  margin-top: 40px;
+}
+
+.card-text{
+  color: #fff;
+  font-size: 20px;
+}
+
+h2{
+  text-align: center;
+}
+.chart-section {
+  display: flex;
+  margin-left: 250px;  /* centraliza horizontalmente */
+    margin-top: 50px;
+  height: 50vh;             /* ocupa a altura toda da janela */
+}
+
+.charts-row {
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: flex-start;   /* alinha pelo topo; usa center se queres central vertical */
+  gap: 200px;                 /* espaço entre os gráficos */
+  margin: 20px 0;
+  flex-wrap: wrap;           /* faz wrap em ecrãs pequenos */
+}
+
+/* cada "cartão" com título + chart */
+
+
+
+.chart-container {
+  width: 100%;
+  height: 320px;             /* altura do gráfico */
+  position: relative;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
